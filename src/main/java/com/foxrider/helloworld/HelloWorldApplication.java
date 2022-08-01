@@ -27,6 +27,6 @@ public class HelloWorldApplication {
 
     @GetMapping("/hello")
     public String helloWorld() throws JsonProcessingException {
-        return mapper.writeValueAsString(new HelloResponse("Hello World", "0.0.2"));
+        return mapper.writeValueAsString(new HelloResponse("Hello World", "0.0.3"));
     }
 }
