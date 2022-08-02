@@ -3,6 +3,9 @@ package com.foxrider.helloworld;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.foxrider.helloworld.model.HelloResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
+@Slf4j
 public class HelloWorldApplication {
-
     private final ObjectMapper mapper;
 
     @Autowired
@@ -21,6 +24,7 @@ public class HelloWorldApplication {
     }
 
     public static void main(String[] args) {
+        log.info("{}, {}", "Hello World", "0.0.3");
         SpringApplication.run(HelloWorldApplication.class, args);
     }
 
