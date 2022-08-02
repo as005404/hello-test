@@ -18,7 +18,6 @@ class HelloWorldApplicationTests {
     void contextLoads() throws JsonProcessingException {
         HelloResponse helloResponse = mapper.readValue(application.helloWorld(), HelloResponse.class);
         assertEquals("Hello World", helloResponse.getMessage());
-        assertEquals("0.0.1", helloResponse.getVersion());
     }
 
 }
